@@ -42,11 +42,11 @@
     </div>
     <div class="results good">
       <p>Good news!</p>
-      <p class="info">You're application isn't using any packages with known security issues.</p>
+      <p class="info">Your application isn't using any packages with known security issues.</p>
     </div>
     <div class="results bad">
       <p>Uh oh!</p>
-      <p class="info">Your project is using packages that have known security issues. Take a look at the reported alerts and consider upgrading or switching packages:</p>
+      <p class="info">Your application is using packages that have known security issues. Take a look at the reported alerts and consider upgrading or switching packages:</p>
       <div class="result">
         <p>
           <code class="package">babrahams:editable-json@0.5.0</code>
@@ -59,10 +59,14 @@
           <code class="package">telescope:core@0.20.0</code>
           <code class="versions">>=0.2.0 || <=0.21.1</code>
         </p>
-        <p class="alert">This version of Telescope is vulnerable to a privilege escalation attack. https://github.com/TelescopeJS/Telescope/blob/master/History.md#v0211-slugscope</p>
+        <p class="alert">This version of Telescope is vulnerable to a privilege escalation attack.</p>
+        <p class="links">More info:</p>
+        <ul>
+          <li><a href="https://github.com/TelescopeJS/Telescope/blob/master/History.md#v0211-slugscope">Github Issue</a></li>
+        </ul>
       </div>
-
     </div>
+    <p class="go-again"><a href="#">Want to scan another app?</a></p>
     <p>Drag and drop your <code>.meteor/versions</code> file into the box above to find out if your application is using any packages with known vulnerabilities.</p>
     <p>This tool is powered by <a href="https://github.com/East5th/package-scan">east5th:package-scan</a> and runs entirely within your browser. We don't send, save, or store your <code>versions</code> file. If you're still feeling nervous, check out a set of <a href="#">sample output</a> first.</p>
     <p>Know about a vulnerable package that we're not reporting? Please help out the community <a href="https://github.com/East5th/package-scan#contributing">and contribute</a>!</p>
