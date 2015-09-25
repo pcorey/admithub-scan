@@ -3,10 +3,19 @@
   margin 4em auto
   border 5px dashed #ddd
   border-radius 16px
+  //transition border 0.25s ease-in-out
   p
-    font-weight 900
-    font-size 1.5em
-    text-align center
-    margin 2em
-    color #ddd
-    cursor pointer
+    transition none
+  .prompt
+    p
+      font-weight 900
+      font-size 1.5em
+      text-align center
+      margin 0.5em
+      color #ddd
+      cursor pointer
+      label
+        cursor pointer
+    #file-select
+      position absolute
+      left -99999px

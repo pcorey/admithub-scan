@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>east5th - scan</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Find out if you're using packages with known vulnerabilities in your Meteor application.">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="canonical" href="http://scan.east5th.co/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/js/bigtext.js"></script>
+    <script src="/js/semver.js"></script>
+    <script src="/js/scan.js"></script>
+    <script src="//use.typekit.net/zxo8nth.js"></script>
+    <script>
+
+    function show() {
+      $(function() {
+        $('.bigtext').bigtext();
+        $('.content').css('opacity', 1);
+      });
+    }
+
+    try {
+      Typekit.load({
+        async: true,
+        inactive: show,
+        active: show
+      });
+    } catch(e) {
+      show();
+    }</script>
+</head>
+
+
+    <body>
+        <header>
+    <div class="wrapper">
+        <a href="http://blog.east5th.co">
+            <img src="/img/east5th.svg">
+        </a>
+        <div class="menu-wrapper">
+            <nav class="menu">
+    <!-- <a href="#">Work</a> -->
+    <a href="http://blog.east5th.co/">Blog</a>
+    <a href="http://www.east5th.co/">Services</a>
+</nav>
+            <nav class="menu-opener">
+                <div class="menu-opener-inner"></div>
+            </nav>
+        </div>
+    </div>
+</header>
+        <section>
+            <div class="content">
+                <div class="post">
+  <div class="post-header">
+    <div class="bigtext">
+      <!-- <span>Is Your Meteor App</span>
+      <span>Vulnerable</span> -->
+      <span>Package Scan</span>
+    </div>
+  </div>
+  <div class="post-content">
+    <div class="drop-target results">
+      <div class="prompt">
+        <input type="file" id="file-select" name="file-select">
+        <p><label for="file-select">versions file goes here</label></p>
+      </div>
+      <div class="good" style="display:none;">
+        <p>Good news!</p>
+        <p class="info">Your application isn't using any packages with known security issues.</p>
+      </div>
+      <div class="bad" style="display:none;">
+        <p>Uh oh!</p>
+        <p class="info">Your application is using packages that have known security issues. Take a look at the reported alerts and consider upgrading or switching packages:</p>
+        <div class="result-list">
+          <div class="result">
+            <p>
+              <code class="package" title="Installed package">babrahams:editable-json@0.5.0</code>
+              <code class="versions" title="Vulnerable versions"><=0.5.1</code>
+            </p>
+            <p class="alert">Allows updates to any Mongo collection and is not meant for production use</p>
+          </div>
+          <div class="result">
+            <p>
+              <code class="package" title="Installed package">telescope:core@0.20.0</code>
+              <code class="versions" title="Vulnerable versions">>=0.2.0 || <=0.21.1</code>
+            </p>
+            <p class="alert">This version of Telescope is vulnerable to a privilege escalation attack.</p>
+            <p class="links">More info:</p>
+            <ul>
+              <li><a href="https://github.com/TelescopeJS/Telescope/blob/master/History.md#v0211-slugscope" target="_blank">Github Issue</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="go-again" style="display:none;"><a href="#">Want to scan another app?</a></p>
+    <p>Drag and drop your <code>.meteor/versions</code> file into the box above to find out if your application is using any packages with known vulnerabilities.</p>
+    <p>This tool is powered by <a href="https://github.com/East5th/package-scan">east5th:package-scan</a> and runs entirely within your browser. We don't send, save, sleuth, sniff or store your <code>versions</code> file in any way. If you're still feeling nervous, check out a set of <a class="show-sample" href="#">sample output</a> first.</p>
+    <p>Know about a vulnerable package that we're not reporting? Please help out the community <a href="https://github.com/East5th/package-scan#contributing">and contribute</a>!</p>
+    <p>Include this tool in your build process:</p>
+    <p><code>meteor add east5th:package-scan</code></p>
+  </div>
+</div>
+            </div>
+        </section>
+        
+          <footer class="content">
+  <div class="footer-content">
+    <p><img src="/img/portrait-150x150.png"><span>Hi, I'm <a href="https://twitter.com/petecorey">Pete Corey</a>. Interested in a security assessment of your Meteor application? Check out <a href="http://assess.east5th.co/">East5th Assess</a>!</span></p>
+    <div class="signup-form">
+      <form action="//east5th.us11.list-manage.com/subscribe/post?u=f8833fd40e2b1b28545d9f382&amp;id=c56ceba687" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+        <p>Sign up for the <em>East5th Newsletter</em> to stay up to date on all of my latest posts, projects, and thoughts!</p>
+        <div class="email-wrapper">
+          <!-- <input type="text" placeholder="First name" value="" name="FNAME" class="" id="mce-FNAME" tabindex="2"><input type="text" placeholder="Last name" value="" name="LNAME" class="" id="mce-LNAME" tabindex="3"> -->
+          <input type="text" placeholder="Name" value="" name="FNAME" class="" id="mce-FNAME" tabindex="1"><!--
+          --><input placeholder="Email address" type="email" value="" name="EMAIL" id="mce-EMAIL" tabindex="2"><!--
+          --><input type="submit" value="I'm in!" name="subscribe" id="mc-embedded-subscribe" tabindex="3">
+        </div>
+        <div style="position: absolute; left: -5000px;"><input type="text" name="b_f8833fd40e2b1b28545d9f382_c56ceba687" tabindex="-1" value=""></div>
+      </form>
+    </div>
+  </div>
+</footer>
+        
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54297550-8', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        <script>
+            $(".menu-opener").click(function(){
+                $(".menu-opener, .menu-opener-inner, .menu").toggleClass("active");
+            });
+        </script>
+    </body>
+</html>

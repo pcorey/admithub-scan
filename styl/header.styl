@@ -1,0 +1,55 @@
+body > header {
+    margin: 0 0 1em;
+    background-image: url('/img/vectorized.png');
+    background-size: cover;
+    background-position: 0 100%;
+    .wrapper {
+        max-width: 750px;
+        width: 100%;
+        padding:0 25px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    img {
+        height: 90px;
+        padding: 25px 0;
+        display: block;
+        mix-blend-mode: opacity;
+    }
+    .menu-wrapper {
+        position: relative;
+        display: flex;
+        margin: 13px 0;
+    }
+    .menu-opener {
+        position: relative;
+        z-index: 2;
+    }
+    .menu {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        a {
+            font-family: proxima-nova,serif;
+            font-size: 20px;
+            margin-left: 1em;
+            color: white;
+            line-height: 64px;
+            text-transform: uppercase;
+            font-weight: 700;
+            &:last-of-type {
+                margin-right: 0.5em;
+            }
+        }
+        @media (max-width: 500px) {
+            position: absolute;
+            top: 64px;
+            right: 0;
+            left: auto;
+            a {
+                margin: 0 1em;
+            }
+        }
+    }
+}

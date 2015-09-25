@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <div class="bigtext">
+      {% for part in page.titleParts %}
+        <span>{{part}}</span>
+      {% endfor %}
+    </div>
+    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+  </header>
+
+  <article class="post-content">
+  {{ content }}
+  </article>
+
+  <!-- {% include disqus.html %} -->
+</div>

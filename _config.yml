@@ -1,0 +1,17 @@
+# Site settings
+title: east5th - scan
+email: hello@east5th.co
+description: "Find out if you're using packages with known vulnerabilities in your Meteor application."
+baseurl: ""
+url: "http://scan.east5th.co"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+gems:
+  - jekyll-sitemap
+
+exclude:
+  - node_modules
+  - styl

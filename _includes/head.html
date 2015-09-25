@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="{{ '/js/bigtext.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/js/semver.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/js/scan.js' | prepend: site.baseurl }}"></script>
+    <script src="//use.typekit.net/zxo8nth.js"></script>
+    <script>
+
+    function show() {
+      $(function() {
+        $('.bigtext').bigtext();
+        $('.content').css('opacity', 1);
+      });
+    }
+
+    try {
+      Typekit.load({
+        async: true,
+        inactive: show,
+        active: show
+      });
+    } catch(e) {
+      show();
+    }</script>
+</head>
